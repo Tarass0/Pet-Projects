@@ -1,0 +1,1184 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+$container-width: 1280px;
+$dark-violet : #2f0f55;
+$light-violet : #6c54a9;
+$grey: #475b5b;
+$sea-color: #4a5454;
+
+@mixin main-fonts-Alfa-Slab-One($font-size, $color, $font-weight) {
+    font-family: 'Alfa Slab One';
+    font-style: normal;
+    font-weight: $font-weight;
+    font-size: $font-size;
+    color: $color;
+}
+
+@mixin main-fonts-Montserrat($font-size, $color) {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    font-size: $font-size;
+    color: $color;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.main__wrap {
+    width: 100%;
+    max-width: $container-width;
+    margin-top: 74px;
+}
+
+
+header {
+    display: flex;
+
+    .logo {
+        flex-grow: 1;
+
+        svg {
+            width: 223px;
+            height: 43px;
+        }
+    }
+
+    nav {
+        display: flex;
+
+        #nav-icon {
+            display: none;
+        }
+
+        .navigation {
+            @include main-fonts-Montserrat(15px, $grey);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+
+            .navigation__item {
+                margin-right: 64px;
+                cursor: pointer;
+            }
+
+            :last-child {
+                margin-right: 84px;
+            }
+
+            .navigation__item:hover {
+                color: blue;
+            }
+        }
+    }
+
+    .contact-number {
+        display: flex;
+        align-items: center;
+
+        .phone__img {
+            display: flex;
+            margin-right: 17px;
+
+            #icon__mobile {
+                display: none;
+            }
+
+            svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        .phone {
+            @include main-fonts-Montserrat(15px, $dark-violet);
+            font-weight: bold;
+        }
+    }
+
+}
+
+
+.pages {
+    @include main-fonts-Montserrat(12px, #4d4d4d);
+    margin-top: 55px;
+
+    span {
+        margin-right: 10px;
+    }
+
+    :nth-child(8) {
+        display: none;
+    }
+
+    :last-child {
+        color: $dark-violet;
+        font-weight: 600;
+    }
+}
+
+
+.main-information {
+    display: flex;
+    margin-top: 40px;
+
+    .information {
+        width: 100%;
+        margin-left: 77px;
+
+        .title {
+            .status {
+                @include main-fonts-Montserrat(12px, $grey);
+                text-transform: uppercase;
+            }
+
+            .price {
+                @include main-fonts-Montserrat(30px, $dark-violet);
+                font-weight: bold;
+                margin-top: 25px;
+            }
+
+            .address {
+                @include main-fonts-Montserrat(18px, $dark-violet);
+                margin-top: 27px;
+
+                span {
+                    display: block;
+                }
+            }
+        }
+
+        .office {
+            @include main-fonts-Montserrat(13px, $grey);
+            text-transform: uppercase;
+            display: flex;
+            margin-top: 41px;
+
+            :first-child {
+                width: 100%;
+                max-width: 206px;
+            }
+
+            :last-child {
+                display: flex;
+
+                :first-child {
+                    display: block;
+                    width: 20px;
+                    height: 20px;
+                    background: #54a95c;
+                    border-radius: 50%;
+                }
+
+                :last-child {
+                    margin-left: 15px;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+
+        .building-information {
+            margin-top: 66px;
+
+            .label {
+                @include main-fonts-Montserrat(13px, $grey);
+
+                :first-child {
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 206px;
+                }
+            }
+
+            .info {
+                @include main-fonts-Montserrat(18px, $sea-color);
+                font-weight: bold;
+                margin-top: 21px;
+
+                :first-child {
+                    display: inline-block;
+                    width: 100%;
+                    max-width: 206px;
+                }
+            }
+        }
+    }
+}
+
+
+.wrap {
+    margin-top: 132px;
+    display: flex;
+    justify-content: space-between;
+
+    .additional-information {
+        width: 100%;
+        max-width: 734px;
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            @include main-fonts-Montserrat(25px, $dark-violet);
+            font-weight: bold;
+        }
+
+        .brokers {
+            display: flex;
+            margin-top: 55px;
+            flex-wrap: wrap;
+
+            .broker {
+                .label {
+                    @include main-fonts-Montserrat(13px, $grey);
+                }
+
+                .contact-broker {
+                    @include main-fonts-Montserrat(18px, $light-violet);
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    margin-top: 22.3px;
+                }
+            }
+
+            .rate {
+                width: 100%;
+                max-width: 35%;
+            }
+
+            .income {
+                width: 100%;
+                max-width: 32%;
+            }
+
+            .multiplier {
+                flex-grow: 1;
+            }
+        }
+
+        .building {
+            margin-top: 57px;
+
+            .label {
+                @include main-fonts-Montserrat(15px, $grey);
+            }
+
+            .info {
+                @include main-fonts-Montserrat(22px, $sea-color);
+                font-weight: bold;
+                margin-top: 22.3px;
+            }
+        }
+
+        .price {
+            width: 100%;
+            max-width: 35%;
+        }
+
+        .lot-price {
+            width: 100%;
+            max-width: 32%;
+        }
+
+        .floors {
+            flex-grow: 1;
+        }
+
+        .parking {
+            width: 100%;
+            max-width: 35%;
+
+            .label {
+                @include main-fonts-Montserrat(15px, $grey);
+            }
+
+            .info {
+                margin-top: 22.3px;
+
+                :first-child {
+                    @include main-fonts-Montserrat(22px, $sea-color);
+                    font-weight: bold;
+                }
+
+                :last-child {
+                    @include main-fonts-Montserrat(15px, $grey);
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+
+    .broker-information {
+        display: flex;
+        width: 100%;
+        max-width: 517px;
+        max-height: 380px;
+        background: #f8f6fb;
+        border-radius: 9.72px;
+        padding-bottom: 42px;
+
+        .foto {
+            margin-top: 47px;
+            margin-left: 36px;
+
+            img {
+                max-width: 100%;
+            }
+        }
+
+        .info {
+            margin-top: 50px;
+            margin-left: 37px;
+
+            .position {
+                .label {
+                    @include main-fonts-Montserrat(13px, $grey);
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(20px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 20px;
+                    margin-left: 0;
+                }
+            }
+
+            .contact {
+                .label {
+                    @include main-fonts-Montserrat(13px, $grey);
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(15px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 15px;
+                }
+            }
+
+            .phone {
+                margin-top: 30px;
+
+                .info {
+                    margin-left: 0;
+                }
+            }
+
+            .email {
+                margin-top: 25px;
+
+                .info {
+                    margin-left: 0;
+                }
+            }
+
+            .bth {
+                margin-top: 30px;
+
+                button {
+                    @include main-fonts-Montserrat(15px, $sea-color);
+                    width: 252px;
+                    height: 60px;
+                    background: #ffc400;
+                    text-transform: uppercase;
+                    border: none;
+                    border-radius: 28px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+
+                button:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+}
+
+.emblem{
+    @include main-fonts-Montserrat(15px, $grey);
+    text-align: center;
+    .text{
+        margin-top: 75px;
+    }
+    .emblem{
+        margin-top: 35px;
+    }
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    background: #5f428c;
+    height: 358px;
+    margin-top: 65px;
+    .logo{
+        text-align: center;
+        margin-top: 70px;
+       img{
+           max-width: 100%;
+       }
+    }
+    .footer__nav{
+        margin-top: 70px;
+        .navigation {
+            @include main-fonts-Montserrat(15px, #ffffff);
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            .navigation__item {
+                margin-right: 64px;
+                cursor: pointer;
+            }
+
+            :last-child {
+                margin-right: 0px;
+            }
+
+            .navigation__item:hover {
+                color: blue;
+            }
+        }
+    }
+    .copyright{
+        margin-top: 70px;
+        @include main-fonts-Montserrat(13.5px, #ffffff); 
+        text-align: center;
+    }
+}
+
+
+.commuting {
+    margin-top: 165px;
+
+    .title {
+        @include main-fonts-Montserrat(25px, $dark-violet);
+        font-weight: bold;
+    }
+
+    .wrap {
+        margin-top: 50px;
+
+        .commuting__item {
+            .label {
+                @include main-fonts-Montserrat(15px, $grey);
+            }
+
+            .info {
+                @include main-fonts-Montserrat(22px, $sea-color);
+                font-weight: bold;
+                margin-top: 22.3px;
+            }
+        }
+    }
+}
+
+.wrap__map{
+    margin-top: 30px;
+    #map{
+        width: 100%;
+        height: 600px;
+    }
+}
+
+@media screen and(max-width: 1165px) {
+
+
+    .main__wrap {
+        margin-top: 25px;
+    }
+
+
+    header {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            flex-grow: 0;
+
+            svg {
+                width: 140px;
+                height: 26px;
+            }
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            margin-right: 15px;
+            width: 26px;
+
+            #nav-icon {
+                display: block;
+            }
+
+            .navigation {
+                display: none;
+                margin-top: 5px;
+
+                .navigation__item {
+                    margin-right: 0px;
+                    padding: 5px 10px;
+                    display: block;
+                    text-align: right;
+                }
+
+                .navigation__item:hover {
+                    background: #f8f6fb;
+                    border-radius: 30px;
+                }
+            }
+        }
+
+        .contact-number {
+            display: block;
+            order: -1;
+            margin-left: 15px;
+
+            .phone__img {
+                display: flex;
+                margin-right: 0px;
+                height: auto;
+                margin-top: 3.5px;
+
+                svg {
+                    cursor: pointer;
+                    position: relative;
+                    width: 23px;
+                    height: 23px;
+                    fill: white;
+                }
+            }
+
+            .phone {
+                display: none;
+                margin-top: 10px;
+            }
+        }
+    }
+
+
+    .pages {
+        @include main-fonts-Montserrat(12px, #4d4d4d);
+        margin-top: 28px;
+        margin-left: 15px;
+
+        :nth-child(3) {
+            display: none;
+        }
+
+        :nth-child(4) {
+            display: none;
+        }
+
+        :nth-child(5) {
+            display: none;
+        }
+
+        :nth-child(6) {
+            display: none;
+        }
+
+        :nth-child(7) {
+            display: none;
+        }
+
+        :nth-child(8) {
+            display: inline-block;
+        }
+    }
+
+
+    .main-information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 28px;
+        width: 100%;
+        max-width: 100%;
+
+        .information {
+            width: 100%;
+            max-width: 735px;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+
+
+    .wrap {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .additional-information {
+            width: 100%;
+            max-width: 734px;
+            order: 1;
+            margin-top: 30px;
+
+            .title {
+                text-align: center;
+            }
+        }
+
+        .broker-information {
+            max-width: 734px;
+        }
+    }
+
+
+    .commuting {
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .title {
+            @include main-fonts-Montserrat(25px, $dark-violet);
+            font-weight: bold;
+            width: 100%;
+            max-width: 734px;
+        }
+
+        .wrap {
+            margin-top: 50px;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            max-width: 734px;
+
+            .commuting__item {
+                .label {
+                    @include main-fonts-Montserrat(15px, $grey);
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(22px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 22.3px;
+                }
+            }
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 765px) {
+
+    .main-information {
+        display: block;
+        margin-top: 15px;
+        width: 100%;
+        max-width: 100%;
+
+        .information {
+            box-sizing: border-box;
+            width: 100%;
+            padding-left: 15px;
+            margin-top: 27px;
+
+            .title {
+                .status {
+                    @include main-fonts-Montserrat(12px, $grey);
+                }
+
+                .price {
+                    @include main-fonts-Montserrat(20px, $dark-violet);
+                    margin-top: 15px;
+                    font-weight: bold;
+                }
+
+                .address {
+                    @include main-fonts-Montserrat(18px, $dark-violet);
+                    margin-top: 15px;
+                    font-weight: 500;
+                    line-height: 1.4;
+                }
+            }
+
+            .office {
+                @include main-fonts-Montserrat(13px, $grey);
+                text-transform: uppercase;
+                display: flex;
+                margin-top: 20px;
+
+                :first-child {
+                    width: 100%;
+                    max-width: 206px;
+                }
+
+                :last-child {
+                    display: flex;
+
+                    :first-child {
+                        display: block;
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    :last-child {
+                        margin-left: 15px;
+                        display: flex;
+                        align-items: center;
+                    }
+                }
+            }
+
+            .building-information {
+                margin-top: 25px;
+
+                .label {
+                    @include main-fonts-Montserrat(13px, $grey);
+
+                    :first-child {
+                        display: inline-block;
+                        width: 100%;
+                        max-width: 206px;
+                    }
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(16px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 15px;
+
+                    :first-child {
+                        display: inline-block;
+                        width: 100%;
+                        max-width: 206px;
+                    }
+                }
+            }
+        }
+    }
+
+    .wrap {
+        .additional-information {
+            width: 100%;
+            max-width: 734px;
+            order: 1;
+            margin-top: 30px;
+
+            .title {
+                text-align: center;
+            }
+
+            .brokers {
+                .broker {
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                }
+            }
+
+            .building {
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+        }
+
+        .broker-information {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 0px;
+            padding-bottom: 32px;
+
+            .foto {
+                margin-top: 25px;
+                margin-left: 0px;
+                text-align: center;
+
+                img {
+                    max-width: 100%;
+                }
+            }
+
+            .info {
+                margin-top: 23px;
+                margin-left: 0px;
+                text-align: center;
+
+                .position {
+                    .label {
+                        @include main-fonts-Montserrat(13px, $grey);
+                    }
+
+                    .info {
+                        @include main-fonts-Montserrat(20px, $sea-color);
+                        font-weight: bold;
+                        margin-top: 10px;
+                        margin-left: 0;
+                    }
+                }
+
+                .contact {
+                    .label {
+                        @include main-fonts-Montserrat(13px, $grey);
+                    }
+
+                    .info {
+                        @include main-fonts-Montserrat(15px, $sea-color);
+                        font-weight: bold;
+                        margin-top: 15px;
+                    }
+                }
+
+                .phone {
+                    margin-top: 20px;
+                }
+
+                .email {
+                    margin-top: 20px;
+                }
+
+                .bth {
+                    margin-top: 20px;
+
+                    button {
+                        width: 100%;
+                        max-width: 290px;
+                        height: 50px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 650px) {
+    .wrap {
+        .additional-information {
+            margin-top: 63px;
+
+            .title {
+                @include main-fonts-Montserrat(23px, $dark-violet);
+            }
+
+            .brokers {
+                margin-top: 47px;
+                flex-wrap: wrap;
+
+                .broker {
+                    .contact-broker {
+                        @include main-fonts-Montserrat(12px, $light-violet);
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        margin-top: 22.3px;
+                    }
+                }
+
+                .rate {
+                    width: 100%;
+                    max-width: 50%;
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                }
+
+                .income {
+                    width: 100%;
+                    max-width: 50%;
+                    box-sizing: border-box;
+                    padding-left: 5px;
+                }
+
+                .multiplier {
+                    width: 100%;
+                    max-width: 50%;
+                    flex-grow: 0;
+                    margin-top: 37px;
+                    box-sizing: border-box;
+                    padding-left: 15px;
+                }
+            }
+
+            .building {
+                margin-top: 37px;
+
+                .label {
+                    @include main-fonts-Montserrat(13px, $grey);
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(14px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 22.3px;
+                }
+            }
+
+            .price {
+                width: 100%;
+                max-width: 50%;
+                box-sizing: border-box;
+                padding-left: 5px;
+            }
+
+            .lot-price {
+                width: 100%;
+                max-width: 50%;
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+
+            .floors {
+                flex-grow: 1;
+                order: 1;
+                box-sizing: border-box;
+                padding-left: 15px;
+            }
+
+            .parking {
+                width: 100%;
+                max-width: 50%;
+                box-sizing: border-box;
+                padding-left: 5px;
+
+                .label {
+                    :first-child {
+                        display: none;
+                    }
+
+                    @include main-fonts-Montserrat(13px, $grey);
+                }
+
+                .info {
+                    margin-top: 22.3px;
+
+                    :first-child {
+                        @include main-fonts-Montserrat(14px, $sea-color);
+                        font-weight: bold;
+                    }
+
+                    :last-child {
+                        @include main-fonts-Montserrat(13px, $grey);
+                        margin-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    .commuting {
+        margin-top: 66px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .title {
+            @include main-fonts-Montserrat(25px, $dark-violet);
+            font-weight: bold;
+            width: 100%;
+            max-width: 734px;
+            box-sizing: border-box;
+            padding-left: 15px;
+        }
+
+        .wrap {
+            flex-wrap: wrap;
+            margin-top: 0;
+            .commuting__item {
+                width: 50%;
+                margin-top: 40px;
+                padding-left: 15px;
+                box-sizing: border-box;
+                .label {
+                    @include main-fonts-Montserrat(15px, $grey);
+                }
+
+                .info {
+                    @include main-fonts-Montserrat(18px, $sea-color);
+                    font-weight: bold;
+                    margin-top: 22.3px;
+                }
+            }
+        }
+    }
+
+    .wrap__map{
+        margin-top: 30px;
+        #map{
+            width: 100%;
+            height: 350px;
+        }
+    }
+
+    .emblem{
+        @include main-fonts-Montserrat(15px, $grey);
+        text-align: center;
+        .text{
+            margin-top: 45px;
+        }
+        .emblem{
+            margin-top: 15px;
+        }
+    }
+
+    footer{
+        height: 500px;
+        margin-top: 45px;
+        
+        .footer__nav{
+            margin-top: 40px;
+            
+            .navigation {
+                
+                display: block;
+                
+                .navigation__item {
+                    margin-right: 0px;
+                    cursor: pointer;
+                    margin-top: 30px;
+                }
+    
+                :last-child {
+                    margin-right: 0px;
+                }
+    
+                .navigation__item:hover {
+                    color: blue;
+                }
+            }
+        }
+    }
+}
+
+@media screen and(max-width: 405px) {
+
+
+    .pages {
+        span {
+            margin-right: 3px;
+            font-size: 10px;
+        }
+    }
+
+
+    .main-information {
+        .information {
+            .office {
+                :first-child {
+                    width: 100%;
+                    max-width: 145px;
+                }
+            }
+
+            .building-information {
+                .label {
+                    :first-child {
+                        display: inline-block;
+                        width: 100%;
+                        max-width: 145px;
+                    }
+                }
+
+                .info {
+                    :first-child {
+                        display: inline-block;
+                        width: 100%;
+                        max-width: 145px;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+// .information {
+//     width: 100%;
+//     margin-left: 15px;
+//     margin-top: 27px;
+//     .title {
+//         .status {
+//             @include main-fonts-Montserrat(12px, $grey);
+//         }
+
+//         .price {
+//             @include main-fonts-Montserrat(20px, $dark-violet);
+//             margin-top: 15px;
+//             font-weight: bold;
+//         }
+
+//         .address {
+//             @include main-fonts-Montserrat(18px, $dark-violet);
+//             margin-top: 15px;
+//             font-weight: 500;
+//             line-height: 1.4;
+//         }
+//     }
+
+//     .office {
+//         @include main-fonts-Montserrat(13px, $grey);
+//         text-transform: uppercase;
+//         display: flex;
+//         margin-top: 20px;
+
+//         :first-child {
+//             width: 100%;
+//             max-width: 206px;
+//         }
+
+//         :last-child {
+//             display: flex;
+
+//             :first-child {
+//                 display: block;
+//                 width: 15px;
+//                 height: 15px;
+//             }
+
+//             :last-child {
+//                 margin-left: 15px;
+//                 display: flex;
+//                 align-items: center;
+//             }
+//         }
+//     }
+// /************/
+//     .building-information {
+//         margin-top: 40px;
+
+//         .label {
+//             @include main-fonts-Montserrat(13px, $grey);
+//             :first-child {
+//                 display: inline-block;
+//                 width: 100%;
+//                 max-width: 206px;
+//             }
+//         }
+
+//         .info {
+//             @include main-fonts-Montserrat(18px, $sea-color);
+//             font-weight: bold;
+//             margin-top: 21px;
+
+//             :first-child {
+//                 display: inline-block;
+//                 width: 100%;
+//                 max-width: 206px;
+//             }
+//         }
+//     }
+// }
